@@ -5,6 +5,23 @@ let computerSelection = " "
 let playerScore = 0;
 let computerScore = 0;
 
+const info = document.querySelector('#info');
+const pScore = document.querySelector('#pScore');
+const cScore = document.querySelector('#cScore');
+
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+rock.addEventListener('click', () => {
+    playRound("rock");
+});
+paper.addEventListener('click', () => {
+    playRound("paper");
+});
+scissors.addEventListener('click', () => {
+    playRound('scissors');
+});
+
 function getPlayerChoice()
 {
     let NeedValidInput = true;
@@ -46,54 +63,60 @@ function getComputerChoice()
     return choice;
 }
 
-function playRound( pChoice, cChoice)
+function playRound(pChoice)
 {   
+    computerSelection = getComputerChoice();
     var ResponseToPlayer = ""
-    if(pChoice == cChoice)
+    if(pChoice == computerSelection)
     {
         ResponseToPlayer = "Draw! You And The Computer have Chosen The Same!"
     }
-    else if(pChoice == "rock" && cChoice == "paper")
+    else if(pChoice == "rock" && computerSelection == "paper")
     {
         ResponseToPlayer = "You Lose!"
         computerScore++
     }
-    else if(pChoice == "rock" && cChoice == "scissors")
+    else if(pChoice == "rock" && computerSelection == "scissors")
     {
         ResponseToPlayer = "You Win!"
         playerScore++
     }
-    else if(pChoice == "paper" && cChoice == "scissors")
+    else if(pChoice == "paper" && computerSelection == "scissors")
     {
         ResponseToPlayer = "You Lose!"
         computerScore++
     }
-    else if(pChoice == "paper" && cChoice == "rock")
+    else if(pChoice == "paper" && computerSelection == "rock")
     {
         ResponseToPlayer = "You Win!"
         playerScore++
     }
-    else if(pChoice == "scissors" && cChoice == "rock")
+    else if(pChoice == "scissors" && computerSelection == "rock")
     {
         ResponseToPlayer = "You Lose!"
         computerScore++
     }
-    else if(pChoice == "scissors" && cChoice == "paper")
+    else if(pChoice == "scissors" && computerSelection == "paper")
     {
         ResponseToPlayer = "You Win!"
         playerScore++
     }
 
-    console.log("Players Choice: " + pChoice + " Computer Choice: " + cChoice )
+    info.textContent = ResponseToPlayer;
+    pScore.textContent = `Player Score: ${playerScore}`;
+    cScore.textContent = `Computer Score: ${computerScore}`;
+
+    console.log("Players Choice: " + pChoice + " Computer Choice: " + computerSelection)
     console.log("Players Score: " + playerScore + " Computer Score: " + computerScore )
     console.log(ResponseToPlayer);
 }
+
 
 function main()
 {
     var counter = 1
     var rounds = 6
-    while(counter < 6)
+    while(counter < rounds)
     {
         console.log("New Round Has begun! Round: " + counter)
         playerSelection = getPlayerChoice();
@@ -105,5 +128,3 @@ function main()
     console.log("Game Completed!")
     
 }
-
-main();
