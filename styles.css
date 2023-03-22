@@ -25,6 +25,7 @@ body {
 }
 
 .game >.score {
+    color: white;
     background-image: url(imgs/board.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -70,9 +71,9 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: black;
+    color: white;
+    text-shadow: 0 0 4px black,0 0 4px black,0 0 4px black,0 0 4px black;
     font-size: 96px;
-    font-weight: bold;
     border-radius: 16px;
     height:80%;
     min-width: 300px;
