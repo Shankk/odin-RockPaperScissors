@@ -4,6 +4,7 @@ let playerSelection = " "
 let computerSelection = " "
 let playerScore = 0;
 let computerScore = 0;
+let newGame = false;
 
 const info = document.querySelector('#info');
 const pScore = document.querySelector('#pScore');
@@ -109,22 +110,4 @@ function playRound(pChoice)
     console.log("Players Choice: " + pChoice + " Computer Choice: " + computerSelection)
     console.log("Players Score: " + playerScore + " Computer Score: " + computerScore )
     console.log(ResponseToPlayer);
-}
-
-
-function main()
-{
-    var counter = 1
-    var rounds = 6
-    while(counter < rounds)
-    {
-        console.log("New Round Has begun! Round: " + counter)
-        playerSelection = getPlayerChoice();
-        computerSelection = getComputerChoice();
-
-        playRound(playerSelection, computerSelection);
-        counter++
-    }
-    console.log("Game Completed!")
-    
 }

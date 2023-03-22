@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: 'Delicious Handrawn', cursive;
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.game {
+    background-image: url(imgs/wood.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    padding: 64px 0px;
+    flex: 1;
+}
+
+.game >.score {
+    background-image: url(imgs/board.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1 0 0;
+
+}
+
+.game >.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80%;
+    flex: 1 0 0;
+}
+
+.footer {
+    color: #E5E7EB;
+    background-color: #1F2937;
+    padding: 16px;
+    text-align: center;
+}
+
+#rock {
+    background-image: url(imgs/rock.jpeg);
+}
+
+#paper {
+    background-image: url(imgs/paper.jpeg);
+}
+
+#scissors {
+    background-image: url(imgs/scissors.jpg);
+}
+
+button {
+    font-family: 'Delicious Handrawn', cursive;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    font-size: 96px;
+    font-weight: bold;
+    border-radius: 16px;
+    height:80%;
+    min-width: 300px;
+    margin: 0px 16px;
+    flex: 1;
+    
+}

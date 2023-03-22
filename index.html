@@ -5,20 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
 </head>
     <body>
-        <h1>Rock Paper Scissors Game!</h1>
-        <div id="info">Please Select Your Choice To Begin!</div>
-        <div class="score">
-            <div id="pScore">Player Score: 0</div>
-            <div id="cScore">Computer Score: 0</div>
+        <div class="page">
+            <div class="game">
+
+                <div class="score">
+                    <h1>Rock Paper Scissors</h1>
+                    <div id="info">Please Select Your Choice To Begin!</div>
+                    <div id="pScore">Player Score: 0</div>
+                    <div id="cScore">Computer Score: 0</div>
+                </div>
+
+                <div class="choices">
+                    <button id="rock">Rock</button>
+                    <button id="paper">Paper</button>
+                    <button id="scissors">Scissors</button>
+                </div>
+            </div>
+            
+            <div class="footer">
+                Copyright @ Brian Viveiros 2023
+            </div>
         </div>
-        <div class="choices">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
-        </div>
-        
         
         <script src="code.js"></script>
     </body>
